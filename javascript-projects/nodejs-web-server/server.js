@@ -69,3 +69,5 @@ const host = 'localhost';
 server.listen(port, host, () => {
     console.log(`Server berjalan pada http://${host}:${port}`);
 });
+
+// sukses diambil ke pc windows 11
