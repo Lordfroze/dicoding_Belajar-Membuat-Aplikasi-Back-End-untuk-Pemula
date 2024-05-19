@@ -28,12 +28,20 @@ const routes = [
         },
     },
     {
+        method: 'GET',
+        path: '/hello/{name?}',
+        handler: (request, h) => {
+            const {name = 'Stranger'} = request.params;
+            return `Hello, ${name}!`;
+        },
+    },
+    {
         method: '*',
         path: '/{any*}',
         handler: (request, h) => {
             return 'Halaman tidak ditemukan';
         },
     },
-]
+];
 
 module.exports = routes;
